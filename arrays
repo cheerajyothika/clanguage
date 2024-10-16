@@ -1,0 +1,121 @@
+
+TODAY
+YESTERDAY
+𝑪𝒓𝒊𝒎𝒆 𝑷𝒂𝒕𝒊𝒏𝒆𝒓
+Chudham
+10 :30 varaku
+21:51
+Vamoo
+21:51
+Avadhu
+21:51
+Niku ite call chaiii
+21:51
+Thappadhu gaa mari
+21:51
+You
+Niku ite call chaiii
+Sare
+21:51
+Lagusthanu
+21:51
+You
+Lagusthanu
+Sare
+21:51
+𝑪𝒓𝒊𝒎𝒆 𝑷𝒂𝒕𝒊𝒏𝒆𝒓
+Sare
+Marichipoku
+21:51
+You
+Marichipoku
+Haa
+21:51
+Mm
+21:52
+Forwarded
+
+0:54
+21:57
+Avuthunaya
+22:21
+Niku
+22:21
+Ledhu maa
+22:27
+Avatledhu
+22:27
+TODAY
+Naku avaldhu
+05:20
+
+05:20
+Forwarded
+Here's a simple C program to find prime numbers between a given range:
+
+
+#include <stdio.h>
+
+// Function to check if a number is prime
+int is_prime(int num) {
+    if (num <= 1) return 0;
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) return 0;
+    }
+    return 1;
+}
+
+int main() {
+    int lower, upper;
+
+    printf("Enter lower bound: ");
+    scanf("%d", &lower);
+    printf("Enter upper bound: ");
+    scanf("%d", &upper);
+
+    printf("Prime numbers between %d and %d: \n", lower, upper);
+    for (int i = lower; i <= upper; i++) {
+        if (is_prime(i)) printf("%d ", i);
+    }
+
+    return 0;
+}
+
+
+This program prompts the user to input a range (lower and upper bounds) and then prints all prime numbers within that range.
+
+Would you like me to optimize this code or suggest variations?
+08:40
+Forwarded
+Here's a simple C program demonstrating basic array operations:
+
+
+#include <stdio.h>
+
+int main() {
+    // Declare and initialize an array
+    int myArray[5] = {10, 20, 30, 40, 50};
+
+    // Access and print array elements
+    printf("Array elements: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", myArray[i]);
+    }
+    printf("\n");
+
+    // Modify an array element
+    myArray[2] = 300;
+
+    // Print updated array
+    printf("Updated array: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", myArray[i]);
+    }
+    printf("\n");
+
+    // Get array length
+    int length = sizeof(myArray) / sizeof(myArray[0]);
+    printf("Array length: %d\n", length);
+
+    return 0;
+}
