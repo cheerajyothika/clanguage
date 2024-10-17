@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+// Function to read two numbers
+void readNumbers(int *num1, int *num2) {
+    printf("Enter first number: ");
+    scanf("%d", num1);
+    printf("Enter second number: ");
+    scanf("%d", num2);
+}
+
+// Function to calculate sum
+int calculateSum(int num1, int num2) {
+    return num1 + num2;
+}
+
+// Function to display result
+void displayResult(int sum) {
+    printf("Sum: %d\n", sum);
+}
+
+int main() {
+    int num1, num2, sum;
+
+    // Read two numbers
+    readNumbers(&num1, &num2);
+
+    // Calculate sum
+    sum = calculateSum(num1, num2);
+
+    // Display result
+    displayResult(sum);
+
+    return 0;
+}
