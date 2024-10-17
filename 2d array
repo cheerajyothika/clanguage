@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>
+int addarray(int a1[][2], int a2[][2]);
+int addarray(int a1[][2], int a2[][2])
+{
+    int res[2][2];
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<2;j++)
+            {
+            res[i][j]=a1[i][j]+a2[i][j];
+            printf("%d ",res[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+int main()
+{
+    int a[2][2]={{1,2},{3,4}};
+    int b[2][2]={{1,2},{3,4}};
+    addarray(a, b);
+    return 0;
+}
