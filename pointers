@@ -1,0 +1,18 @@
+#include<stdio,>
+#include<conio.h>
+int main()
+{
+    
+    int a=7;
+    p=&a;
+    
+    printf("%d",a);
+    printf("%d"&a);
+    printf("%d",p);
+    printf("%d",*p);
+    a=a+3;
+    printf("%d",a);
+    printf("%d",&a);
+    printf("%d",p);
+    printf("%d",*p);
+    retu
