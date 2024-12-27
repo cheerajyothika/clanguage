@@ -1,0 +1,6 @@
+l=[int(i)for i in input("enter list elements with space:").split()]
+k=int(input("enter k value:"))
+for i in range(k):
+    #temp=1.pop()
+    l.insert(o,l.pop())
+print(l)    
