@@ -1,0 +1,9 @@
+var="ABCDXYZ"
+key=4
+op=""
+for ele in var:
+    if ele .isupper():
+        op+=chr((((ord(ele)-65)+key)%26)+65)
+    elif ele .islower():
+        op+=chr((((ord(ele)-97)+key)%26)+97)
+    print("encrypt is:",op)    
