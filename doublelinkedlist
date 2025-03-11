@@ -1,0 +1,58 @@
+class Node:
+    def __init__(self,data):
+        self.prev = None
+        self.data = data
+        self.next = None
+        
+class DoubleLinkedlist:
+    def __init__(self):
+        self.head = None
+        self.temp = None
+        
+    def insert(self,data):
+        new_node = Node(data)
+        if self.head == None:
+            self.head = new_node
+            self. temp =  self.head
+        else:
+            new_node.prev = self.temp
+            self.temp.next = new_node
+            self.temp = self.temp.next
+    def display(self):
+         self.temp = self.head
+         while self.temp.next:
+             print(self.temp.data,end = "<->")
+             self.temp = self.temp.next
+         print(self.temp.data)
+    def IAS(self,data):
+         new_node = Node(data)
+         new_node.next = self.head
+         self.head.prev = new_node
+         self.head = new_node
+    def DAS(self):
+         self.temp = self.head
+         self.head = self.head.next
+         self.head.prev = None
+         self.temp = None
+    def IAP(self,data,pos):
+        new_node = Node(data)
+        self.temp = self.head
+        while pos > 2:
+            self.temp = self.temp.next
+        new_node.next = self.temp.next
+        new_node.prev = self.temp
+        self.temp.next = new_node
+        new_node.next.prev = new_node
+       
+           
+        
+         
+         
+obj = DoubleLinkedlist()
+obj.insert(10)
+obj.insert(20)
+obj.insert(30)
+obj.insert(40)
+obj.display()
+obj.IAP(50,2)
+obj.display()
