@@ -1,0 +1,55 @@
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+class SingleLinkedList:
+    def __init__(self):
+        self.head = None
+        self.temp = None
+    def insert(self,data):
+         new_node = Node(data)
+         if self.head ==None:
+            self.head = new_node
+            self.temp = self.head
+         else:   
+             self. temp.next = new_node
+             self.temp = self.temp.next
+    def length(self):
+        self.temp = self.head
+        length = 0
+        while self.temp:
+          length +=1
+          self.temp = self.temp.next
+        return length
+    def mid(self):
+        self.temp = self.head
+        print("head :",self.head.data)
+        #ref =self.length()/2
+        ref = 2
+        print("ref :",ref)
+        while ref > 0:
+            print("temp :",self.temp.data)
+            print("ref :",ref)
+            self.temp = self.temp.next
+            ref -= 1
+        print(self.temp.data)
+obj = SingleLinkedList()
+obj.insert(10)
+obj.insert(20)
+obj.insert(30)
+obj.insert(40)
+obj.mid()
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
