@@ -1,0 +1,20 @@
+def calculate_hire_cost(R1, R2, x, n):
+    total_hours = x / 60
+    if total_hours <= n:
+        cost_first_n_hours = total_hours * R1
+        remaining_time = 0
+    else:
+        cost_first_n_hours = n * R1
+        remaining_time = total_hours - n
+        cost_remaining_time = remaining_time * R2
+    total_cost = cost_first_n_hours + cost_remaining_time
+    return total_cost
+R1 = 20  
+R2 = 40   
+x = 300  
+n = 4     
+
+total_cost = calculate_hire_cost(R1, R2, x, n)
+print("Total cost of hiring the car: {total_cost} rupees")
+
+
