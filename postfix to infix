@@ -1,0 +1,52 @@
+def precedence(ele):
+    if ele == "+" or ele =="-":
+        return 1
+    elif ele == "*" or ele =="/":
+        return 2
+    elif ele == "^":
+        return 3
+    else:
+        return 0
+inp = "a*b+c"
+st = []
+op = ""
+for ele in inp:
+    if ele.isalpha():
+        op += ele
+    elif ele in "+-*/^":
+        while (len(st)!= 0) and precedence(ele) <= precedence(st[-1]):
+            op += st.pop()
+        st.append(ele)
+st = st[:: -1]            
+for val in st:
+       op += val
+print(op)
+def isoperator(ele):
+    if ele in "+-*/^":
+        return True
+    else:
+        return False
+inp="ab+"
+st=[]
+ref=""
+for ele in inp:
+     if ele.isalpha():
+         st.append(ele)
+         print(st)
+     elif isoperator(ele):
+         op2=st.pop()
+         op1=st.pop()
+         ref=f"{op1}{ele}{op2}"
+         st.append(ref)
+print(ref)         
+
+
+
+
+
+
+
+
+
+
+
