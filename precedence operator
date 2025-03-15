@@ -1,0 +1,27 @@
+def precedence(ele):
+    if ele == "+" or ele =="-":
+        return 1
+    elif ele == "*" or ele =="/":
+        return 2
+    elif ele == "^":
+        return 3
+    else:
+        return 0
+inp = "a*b+c"
+st = []
+op = ""
+for ele in inp:
+    if ele.isalpha():
+        op += ele
+    elif ele in "+-*/^":
+        while (len(st)!= 0) and precedence(ele) <= precedence(st[-1]):
+            op += st.pop()
+        st.append(ele)
+st = st[:: -1]            
+for val in st:
+       op += val
+print(op)       
+       
+
+
+ 
