@@ -1,0 +1,58 @@
+class queue:
+    def __init__(self,cap):
+        self.cap = cap
+        self.qu = [None]*cap
+        self.front = -1
+        self.rear = -1
+    def enqueue(self,data):
+        if self.rear ==self.cap-1:
+            print("Queue is FULL")
+            return
+        
+        self.rear += 1
+        self.qu[self.rear] = data
+        print(f"{data}enqueue")
+    def dequeue(self):
+       if self.front == self.rear:
+           self.rear = 0
+           self.front = 0
+           print("Queue is EMPTY")
+           return
+       self.front +=1
+       temp = self.qu[self.front]
+       self.qu[self.front] = None
+       return temp
+
+obj =queue(10)
+obj.enqueue(10)
+obj.enqueue(20)
+obj.enqueue(30)
+obj.enqueue(40)
+obj.enqueue(50)
+obj.enqueue(60)
+obj.enqueue(70)
+obj.enqueue(80)
+obj.enqueue(90)
+obj.enqueue(100)
+obj.enqueue(110)
+
+print ("dequed is :",obj.dequeue())
+print ("dequed is :",obj.dequeue())
+print ("dequed is :",obj.dequeue())
+print ("dequed is :",obj.dequeue())
+print ("dequed is :",obj.dequeue())
+print ("dequed is :",obj.dequeue())
+print ("dequed is :",obj.dequeue())
+print ("dequed is :",obj.dequeue())
+print ("dequed is :",obj.dequeue())
+print ("dequed is :",obj.dequeue())
+print ("dequed is :",obj.dequeue())
+print ("dequed is :",obj.dequeue())
+
+
+
+
+
+
+
+
