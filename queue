@@ -1,0 +1,25 @@
+class queue:
+    def __init__(self,cap):
+        self.cap = cap
+        self.qu = [None]*cap
+        self.front = -1
+        self.rear = -1
+    def enqueue(self,data):
+        if self.rear ==self.cap-1:
+            print("Queue is FULL")
+            return
+        self.rear += 1
+        self.qu[self.rear] = data
+        print(f"{data}enqueue")
+obj =queue(5)
+obj.enqueue(10)
+obj.enqueue(20)
+obj.enqueue(30)
+obj.enqueue(40)
+obj.enqueue(50)
+obj.enqueue(60)
+
+
+
+
+
